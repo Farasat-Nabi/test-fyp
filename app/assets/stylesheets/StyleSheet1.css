@@ -1,0 +1,13 @@
+﻿* {
+    margin:0px;
+    padding:0px;
+}
+body {background:white;}
+.outer_wrapper {background:black;max-width:1200px;position:relative;margin:auto;overflow:hidden;}
+.wrapper {height:600px;width:1000px;padding:200px 0px 0px 0px; margin:auto;}
+.wrapper .pic {width:150px;height:150px;background-color:lightgray;float:left;}
+.wrapper .info_wrapper {}
+.wrapper .info1 { position:relative;width:750px;height:50px;border-top:1px solid lightgray;padding:7px 10px 0 0;float:right;}
+.wrapper .info1:nth-child(4) {border-bottom:1px solid lightgray;}
+.wrapper .info1 .round_div1 {height:25px;width:25px;border-radius:50px;background-color:white;float:right;position:absolute;right:0px; top:0px;bottom:0px;margin:auto;}
+.detail1 {display:none;height:200px;width:750px;background:black;float:right;}

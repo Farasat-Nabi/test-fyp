@@ -1,0 +1,63 @@
+/*intializing */
+*{padding:0px;margin:0px;}
+body,html{font-family: tahoma;overflow:hidden;height:100%}
+/*navigation*/
+
+.fixed_nav_bottom_wrapper{position: fixed;bottom:0px;background:black;width:100%;height:30px; opacity: 0.4;z-index: 99;}
+.fixed_nav_bottom_icons{position:fixed;bottom:0px;width:100%;height:30px;z-index: 999}
+.fixed_nav_bottom_icons ul{margin:auto;width:200px;text-align: center;padding:0px;}
+.fixed_nav_bottom_icons ul li{margin:7px 20px;}
+
+
+
+.box_screen{box-sizing:border-box;width:100%;height:100% !important;margin-bottom:0px !important;}
+/*body*/
+.page{box-sizing:border-box;width:100%;height:100%;}
+
+.page.sign_up{background:url('main_2.jpg');background-repeat: no-repeat;background-position:center center;background-size: cover;}
+.page.sign_in{background:url('main_1.jpg');background-repeat: no-repeat;background-position:center center;background-size: cover;}
+
+
+
+
+
+
+
+.wrapper{max-width:1200px;height:700px;position: absolute;top:0px;right:0px;bottom:0px;left:0px;margin: auto;}
+.wrapper .feature{width:500px;height:300px;margin-top:100px;display:inline;float:left;}
+.wrapper .feature.feature_left{float:left;}
+.wrapper .feature_left_bottom{margin-top:400px;}
+.wrapper .feature .heading{font-size: 50px;width: 100%;}
+.wrapper .feature .body{width:80%;color:white;font-size: 20px; }
+
+
+
+.wrapper .functionality .heading{color:white;text-align: center;width:100%;font-size: 20px;}
+.wrapper .functionality .body{text-align: center;width:100%;margin-top:10px;}
+.wrapper .functionality .body ul{list-style: none}
+.wrapper .functionality .body .submit_button{padding: 4px 13px 4px 13px;color:white;border-radius: 4px;font-size: 13px;font-weight:bold;}
+.wrapper .functionality .body .submit_button.green{background:green;border:1px solid darkgreen;}
+.wrapper .functionality .body .submit_button.orange{background:#FFA500;border:1px solid #EE7600;}
+.wrapper .functionality .body .submit_button.darkorange{background:#EE7600;border: 1px solid #FF6600;}
+.wrapper .functionality .body .submit_button.right{float:right;margin-right:50px;margin-top:20px;}
+.wrapper .functionality .body .submit_button.left{float:left;margin-left:50px;margin-top:20px;}
+.wrapper .functionality .body .forgot_password{color: white;float: left;font-size: 12px;margin-top: 31px;margin-left: 50px;cursor: pointer;}
+.wrapper .functionality .body .forgot_password:hover{text-decoration: none;color:green;}
+.wrapper .signin.functionality{width:400px;height:200px;margin-top:350px;display:inline;float:right;margin-right:-40px;}
+.wrapper .signup.functionality{width:400px;height:200px;margin-top:50px;display:inline;float:right;}
+
+#toggle{height:100%;width:100%;position:absolute;top:0px;right:0px;background-image:url('background.jpg');display:none;}
+.page.sign_up #search_2{background-color: #FFA500;}
+.page.sign_in #search_1{background-color: #66CD00;}
+#search_1,#search_2{position: fixed;width: 40px;height: 40px;top: 50px;right: 0px;background-image: url('search_icon.png');
+background-position: center center;background-size: 25px 25px;background-repeat: no-repeat;z-index: 99999;}
+/*input fields*/
+.input_field_big{width:300px;height:40px;margin:10px;border-radius: 5px;border:none;outline:none;padding:10px;color:gray;}
+
+/*glyphicons white*/
+.white, .white a {
+  color: #fff;
+}
+.orange, .orange a{
+	color: orange;	
+}

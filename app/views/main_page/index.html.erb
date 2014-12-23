@@ -1,0 +1,141 @@
+
+
+		<!--		navigation		-->
+		<!--<div class="side_nav">
+			<a href="#sign_in"> <div class="side_nav_link "></div></a>
+			<a href="#search">  <div class="side_nav_link "></div></a>
+			<a href="#sign_up"> <div class="side_nav_link"></div></a>
+		</div>
+
+		<div class="fixed_nav_bottom_wrapper"></div>
+		<div class="fixed_nav_bottom_icons">
+			<ul>
+				<a href="#search"><li class="glyphicon glyphicon-home white"></li></a>
+				<a href="#sign_in"><li class="glyphicon glyphicon-log-in white"></li></a>
+				<a href="#sign_up"><li class="glyphicon glyphicon-log-out white"></li></a>
+			</ul>		
+		</div>-->
+
+		<!-- body  -->
+
+<!--Background Slide show-->
+<div id="carousel" class="carousel slide box_screen" data-ride="carousel" data-interval="false">
+    <ol class="carousel-indicators">
+        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel" data-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner box_screen">
+        
+        <div class="item active box_screen">
+            <div class="page sign_in box_screen">
+            	<div class="wrapper">
+
+                    <div style="" id="search_1">
+                    </div>
+            		<div class="feature feature_left">
+            			<div class="heading" style="color:#66CD00">Teach or Get Taught</div>
+            			<div class="body">Join as a teacher and make your career by teaching million of people around the globe,
+                            thousand of students are waiting for a good instructor. You may also find a perfect teacher to get your
+                            issue solved.
+                        </div>
+            		</div>
+            		<div class="signin functionality">
+            			<div class="heading">Sign in to Continue!</div>
+                        <%= form_tag("signin_action", method: "post") do %>
+            			<div class="body">
+            				<ul>
+            					<li>
+            						<input name="username" class="input_field_big" placeholder="Username/Email Address"/>
+            					</li>
+            					<li>
+            						<input name="password" class="input_field_big" placeholder="Password"/>
+            					</li>
+            					<li>
+            						<a class="forgot_password">Forgot Password</a>
+            						<button class="submit_button right green" type="submit">Sign In</button>
+            					</li>
+            				</ul>
+            			</div>
+                        <% end %>
+            		</div>
+            	</div>
+            </div>
+        </div>
+        <div class="item box_screen">
+            <div class="page sign_up box_screen">
+                <div class="wrapper">
+
+                    <div style="" id="search_2">
+                    </div>
+                    <div class="feature feature_left_bottom">
+                        <div class="heading" style="color:#FFA500">Search for Material</div>
+                        <div class="body">Different type of notes uploaded by thousands of people around the globe, not only notes but thousands type of reading material. Every this is just an account away, sign in to get these facilities.</div>
+                    </div>
+                    <div class="signup functionality">
+                        <div class="heading">Sign up to Continue!</div>
+                        <%= form_tag("signup_action", method: "post") do %>
+                        <div class="body">
+                            <ul>
+                                <li>
+                                    <input class="input_field_big" name="email_address" placeholder="Email Address"/>
+                                </li>
+                                <li>
+                                    <input class="input_field_big" name="username" placeholder="Username"/>
+                                </li>
+                                <li>
+                                    <input class="input_field_big" name="password" placeholder="Password"/>
+                                </li>
+                                <li>
+                                    <input class="input_field_big" name="confirm_passowrd" placeholder="Re-type Password"/>
+                                </li>
+                                <li>
+                                    <input class="input_field_big" name="first_name" placeholder="First Name"/>
+                                </li>
+                                <li>
+                                    <input class="input_field_big" name="last_name" placeholder="Last Name"/>
+                                </li>
+                                <li>
+                                    <input class="input_field_big" name="address" placeholder="Address"/>
+                                </li>
+                                <li>
+                                    <img src="" />
+                                </li>
+                                <li>
+                                    <button class="submit_button left orange" type="submit" style="padding:4px 10px 4px 10px">Sign Up as Student</button>
+                                    <button class="submit_button right darkorange" type="button" style="padding:4px 10px 4px 10px">Sign Up as Teacher</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+<div style="" id="toggle">
+    <div class="wrapper">
+        <div class="search_box">
+            <ul>
+                <li>
+                    <input />
+                </li>
+                <li>
+                    <a></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+$( "#search_1,#search_2" ).click(function() {
+    var effect = 'slide';
+    var options = { direction: "right" };
+    var duration = 500;
+    $('#toggle').toggle(effect, options, duration);
+});
+</script>
+
+
+	
+

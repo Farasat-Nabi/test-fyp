@@ -1,0 +1,192 @@
+
+<script src="jquery.js"></script>﻿
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>
+        
+    </title>
+</head>
+<body>
+    <div class="outer_wrapper">
+        <div class="wrapper">
+            <div class ="pic">            	
+            </div>
+
+            <div class="info_wrapper">
+            	<div class="heading_info"><p>Personal Info</p></div>
+                <div class="info1">
+                    <a id="show_detail_1" style="display:block" href="javascript:" >
+                        <div class="round_div1"></div>
+                     </a>
+                </div>
+                <div class="detail" id ="one">
+                    <form class="form1" id="iform1">
+                        <ul>
+                        	<li>
+                                <label>
+                                    First Name
+                                    </label>
+                                <input name="FirstName" id="Text1" type="text" value= "<%= @user[:first_name]%>"/>
+                            </li>
+                            <li>
+                                <label>
+                                    Last Name
+                                    </label>
+                                <input name="LastName" id="Text2" type="text" value= "<%= @user[:last_name]%>"/>
+                            </li>
+                            <li>
+                                <label>
+                                    Country
+                                    </label>
+                                <input name="Country" id="Text3" type="text" value= "<%= @user[:country]%>"/>
+                            </li>
+                            <li>
+                                <label class="f1">
+                                    State
+                                    </label>
+                                <input name="State" id="Text4" type="text" value= "<%= @user[:state]%>" />
+                                </li>
+                            <li>
+                                <label class="f1">
+                                    City
+                                    </label>
+                                <input name="City" id="Text5" type="text" value= "<%= @user[:city]%>"/>
+                            </li>
+                            <li>
+                                <label class="f1">
+                                    Address
+                                    </label>
+                                <input name="Address" id="Text6" type="text" value= "<%= @user[:address]%>"/>
+                                </li>
+                        </ul>
+                        <button type="button" class ="c_btn" onclick="clickbtn(one)">Cancel</button>
+                        <button type="button" class ="s_btn" onclick="submitform1()">Save</button>
+                        </form>
+                </div>
+                <div class="heading_info"><p>Residential Info</p></div>
+                <div class="info1">
+                   <a id="show_detail_2" style="display:block" href="javascript:" >
+                        <div class="round_div1"></div>
+                     </a>
+                </div>
+                <div class="detail" id ="two">
+                	<button class ="b2" onclick="submitform2()">Save</button>
+                </div>
+                <div class="heading_info"><p>Account Info</p></div>
+                <div class="info1">
+                    <a id="show_detail_3" style="display:block" href="javascript:" >
+                        <div class="round_div1"></div>
+                     </a>
+                </div>
+                <div class="detail" id ="three"></div>
+                <div class="heading_info"><p>More Info</p></div>
+                <div class="info1">
+                    <a id="show_detail_4" style="display:block" href="javascript:" >
+                        <div class="round_div1"></div>
+                     </a>
+                </div>
+                <div class="detail" id ="four"></div>
+             </div> 
+        </div>
+     </div>
+</body>
+</html>
+<script>
+	function submitform1 (){
+		alert("agya");
+		$.ajax({
+                url: 'addprofile',
+                type: 'get',
+                data:  $('#iform1').serialize(),
+                success: function(result){
+                   alert(result);
+                },
+                error:function(){
+        			alert("error");
+        		}
+            });
+	}
+ 
+	function submitform2 (){
+		$.ajax({
+	        url: 'addinfo',
+	        type: 'post',
+	        data:  {},
+	        success: function(result){
+	           	alert(result);
+	        },
+        	error:function(){
+        		alert("error2");
+        	}
+    	});
+	}
+	
+	function clickbtn(id){
+		str="#"+id
+		$(str).slideDown("slow");
+	}
+    $('#show_detail_1').click(function () {
+        //alert(1);
+        var clicks = $(this).data('clicks');
+        if (!clicks) {
+            $("#one").slideDown("slow");
+        }
+        else {
+            $("#one").slideUp("slow");
+        }
+        $(this).data("clicks", !clicks);
+    });
+    $('#show_detail_2').click(function () {
+        var clicks = $(this).data('clicks');
+        if (!clicks) {
+            $("#two").slideDown("slow");
+        }
+        else {
+            $("#two").slideUp("slow");
+        }
+        $(this).data("clicks", !clicks);
+    });
+    $('#show_detail_3').click(function () {
+        var clicks = $(this).data('clicks');
+        if (!clicks) {
+            $("#three").slideDown("slow");
+        }
+        else {
+            $("#three").slideUp("slow");
+        }
+        $(this).data("clicks", !clicks);
+    });
+    $('#show_detail_4').click(function () {
+        var clicks = $(this).data('clicks');
+        if (!clicks) {
+            $("#four").slideDown("slow");
+        }
+        else {
+            $("#four").slideUp("slow");
+        }
+        $(this).data("clicks", !clicks);
+    });
+</script>
+
+<style>
+﻿* {margin:0px;padding:0px;}
+body {background:#eeeeee;}
+.outer_wrapper {max-width:1200px;position:relative;margin:auto;overflow:hidden;}
+.wrapper {height:600px;width:1000px;padding:200px 0px 0px 0px; margin:auto;}
+.wrapper .pic {width:150px;height:150px;background-color:lightgray;float:left;}
+.wrapper .info_wrapper {}
+.wrapper .info_wrapper .heading_info{position:relative; height:30px;width:750px;float:right;}
+.wrapper .info1 { position:relative;width:750px;height:50px;border-top:1px solid lightgray;padding:7px 10px 0 0;float:right;}
+.wrapper .info1:nth-child(4) {border-bottom:1px solid lightgray;}
+.wrapper .info1 .round_div1 {height:25px;width:25px;border-radius:50px;background-color:white;float:right;position:absolute;right:0px; top:0px;bottom:0px;margin:auto;}
+.detail {display:none;height:200px;width:750px;background:darkgrey;float:right;}
+ul {list-style:none;}
+.detail ul li {width:300px; display:inline-block; margin:10px 20px 0px 20px;}
+.detail ul li label { display:block; float:left;}
+.detail ul li input {float:right;}
+.detail .b1{float: right;}
+.detail .c_btn{margin-left: 300px;}
+.detail .s_btn{margin-left: 30px;}
+p{margin:0px 0px 0px 0px;}
+</style>

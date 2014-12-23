@@ -1,0 +1,10 @@
+$(function(){
+  $('#carousel').carousel();
+});
+
+$( "#search_1,#search_2" ).click(function() {
+    var effect = 'slide';
+    var options = { direction: "right" };
+    var duration = 500;
+    $('#toggle').toggle(effect, options, duration);
+});
